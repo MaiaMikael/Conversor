@@ -1,21 +1,22 @@
 # Conversor
-Conversor de peso/kg/
+def converter_quilos_para_toneladas(quilos):
+  """Converte quilos para toneladas.
 
-def converter_quilos_para_toneladas(kilos):
-    """Função que converte quilos para toneladas."""
-    toneladas = kilos / 1000
-    return toneladas
+  Args:
+    quilos: A quantidade de quilos a ser convertida.
 
-def main():
-    try:
-        quilos = float(input("Digite o peso em quilos: "))
-        toneladas = converter_quilos_para_toneladas(quilos)
-        print("O peso em toneladas é:", toneladas)
-    except ValueError:
-        print("Entrada inválida. Por favor, digite um valor numérico para o peso.")
+  Returns:
+    A quantidade de toneladas equivalente.
+  """
 
-    print("FIM")
+  toneladas = quilos / 1000
+
+  return toneladas
 
 
-    if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+  quilos = float(input("Quantos quilos você deseja converter? "))
+
+  toneladas = converter_quilos_para_toneladas(quilos)
+
+  print(f"{quilos} quilos equivalem a {toneladas:.2f} toneladas.")
